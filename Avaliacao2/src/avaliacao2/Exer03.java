@@ -20,11 +20,17 @@ package avaliacao2;
 
 public class Exer03 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        System.out.println(orelhaCoelho(1));
     }
     
+    public static int orelhaCoelho(int coelho){
+        
+        if (coelho == 0) {
+            return 0;
+        } if (coelho == 1) {
+            return 2;
+        } 
+        return 2 + orelhaCoelho(coelho-1);
+    }
 }
