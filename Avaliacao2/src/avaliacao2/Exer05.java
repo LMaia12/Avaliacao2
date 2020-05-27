@@ -19,11 +19,15 @@ package avaliacao2;
 
 public class Exer05 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        System.out.println(triangulo(100));
     }
     
+    public static int triangulo (int linha){
+        
+        if (linha == 1) {
+            return 1;
+        } 
+        return 1 + triangulo(linha-1);
+    }
 }
