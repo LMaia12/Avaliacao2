@@ -34,11 +34,41 @@ package avaliacao2;
 
 public class Exer06 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        System.out.println("A  | B    | Parcela" );
+        System.out.println("Total : " + multiplicacaoRussa(27, 82));
+    }
+    
+    public static int multiplicacaoRussa(int a, int b){
+        
+        if (a == 1) {
+            int parcela = b;
+            exibeLinha(a, b, parcela);
+            return parcela;
+        }
+        if (a % 2 == 1 ) {
+            int parcela = b;
+            exibeLinha(a, b, parcela);
+            return parcela + multiplicacaoRussa(a/2, b*2);
+        }
+        
+        exibeLinha(a, b, 0);
+        return multiplicacaoRussa(a/2, b*2);
+    }
+    
+    public static void exibeLinha (int a, int b, int parcela){
+        
+        if (a == 1) {
+            System.out.println(a + "  | " + b + " | " + parcela);
+        }else if (parcela == 0) {
+            System.out.println(a + "  | " + b + "  | " + "-");
+        } else if (a < 10) {
+            System.out.println(a + "  | " + b + "  | " + parcela);
+        }else if (b >= 10 && b <= 99) {
+            System.out.println(a + " | " + b + "   | " + parcela);
+        }else {
+            System.out.println(a + " | " + b + "  | " + parcela);
+        }
     }
     
 }

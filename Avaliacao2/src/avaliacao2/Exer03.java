@@ -1,4 +1,5 @@
-/* Temos vários coelhos e cada coelho tem duas orelhas grandes e flexíveis. 
+/* 
+ * Temos vários coelhos e cada coelho tem duas orelhas grandes e flexíveis. 
  * Queremos calcular o número total de orelhas em todos os coelhos de forma
  * recursiva (sem loops ou multiplicação). Criar uma função recursiva que receba 
  * um número N representando o número de coelhos e retorne a número total de 
